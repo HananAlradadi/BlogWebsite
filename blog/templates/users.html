@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <section class="section" style="
+    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-left: 300px;">
+        <div class="row">
+          <div class="col-lg-8">
+
+            <div class="card text-center" >
+              <div class="card-body">
+                <h5 class="card-title"> </h5>
+                <!-- Default Table -->
+
+                <table  class=" table table-striped table-primary table-hover " >
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Username </th>
+                      <th scope="col">Email </th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+
+                    
+    {% for i in allUser %}
+    <tr>
+
+    {% if not i.is_superuser %}
+    <td name = 'index'>
+        
+    </td>
+<td>
+
+    {{ i.username }}
+
+    
+
+</td>
+<td>
+    {{ i.email }}
+
+</td>
+
+{% endif %}
+</tr>
+
+    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              </div>
+        </div>
+        </section>
+    <script>
+
+    arr = document.getElementsByName('index')
+    for(i = 0 ; i < arr.length ; i++){
+        arr[i].innerText = i +1 
+    }
+</script>
+{% endblock %}
+
+
+

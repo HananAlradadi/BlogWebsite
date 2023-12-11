@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <section class="section center" style="
+    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-left: 300px;">
+        <div class="row">
+          <div class="col-lg-8">
+
+            <div class="card text-center" >
+              <div class="card-body">
+                <h5 class="card-title"> </h5>
+                <div class="list-group">
+                <a class="list-group-item list-group-item-action" href="{% url 'home' %}">Home</a>
+                 <a class="list-group-item list-group-item-action" href="{% url 'usres' %}">Users</a>
+                 <a class="list-group-item list-group-item-action" href="{% url 'comments' %}">Comments</a>
+                  <a class="list-group-item list-group-item-action" href="{% url 'categories' %}">Categories</a>
+                  <a class="list-group-item list-group-item-action" aria-current="page" href="{% url 'blogs' %}">Blog</a>
+                </div>
+</div>
+</div>
+</div>
+        </div>
+    </section>
+     
+                {% endblock %}

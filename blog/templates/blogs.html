@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <section class="section center" style="
+    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-left: 300px;">
+        <div class="row">
+          <div class="col-lg-8">
+
+            <div class="card text-center" >
+              <div class="card-body">
+                <h5 class="card-title"> </h5>
+                <div class="list-group">
+                  {% for i in allPost %}
+                  <a href="{% url 'blogdetails' i.ID%}" class="list-group-item list-group-item-action">{{ i.Title }}</a>
+                {% endfor %}
+                </div>
+</div>
+</div>
+</div>
+        </div>
+    </section>
+     
+                {% endblock %}
